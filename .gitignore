@@ -10,3 +10,6 @@ npm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*
+
+# Original hi-res image uploads (optimized copies live in public/images)
+/Precious Josiah Images/

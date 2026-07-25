@@ -141,7 +141,7 @@ export function Hero() {
           transition={{ delay: 0.3, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
-          <Portrait className="aspect-[4/5] w-full shadow-card" />
+          <Portrait src="/images/portrait-hero.jpg" className="aspect-[4/5] w-full shadow-card" />
           <div className="glass absolute -bottom-5 -left-5 hidden rounded-2xl border border-[var(--line)] p-4 sm:block">
             <p className="text-xs text-[var(--muted)]">Focused on</p>
             <p className="font-serif text-lg">Africa's Digital Economy</p>

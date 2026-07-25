@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Play, Mic2, Newspaper, Video } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
+import { Gallery } from "@/components/gallery";
 
 export const metadata: Metadata = {
   title: "Media",
@@ -74,6 +75,8 @@ export default function MediaPage() {
           Media enquiry? <a href="/contact" className="text-royal link-underline">Get in touch →</a>
         </p>
       </section>
+
+      <Gallery />
     </>
   );
 }

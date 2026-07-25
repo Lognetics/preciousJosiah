@@ -17,7 +17,7 @@ const bios = [
   },
   {
     label: "Medium bio",
-    text: `${site.name} is a Web3 strategist, community builder, fintech advocate, and thought leader. His work sits at the intersection of technology, finance, human behaviour, and leadership — with a consistent focus on making innovation accessible across Africa and beyond. He writes and speaks widely on stablecoins, DeFi, community building, and financial inclusion.`,
+    text: `${site.name} is a Web3 strategist, community builder, fintech advocate, and thought leader. Her work sits at the intersection of technology, finance, human behaviour, and leadership — with a consistent focus on making innovation accessible across Africa and beyond. She writes and speaks widely on stablecoins, DeFi, community building, and financial inclusion.`,
   },
 ];
 
@@ -32,7 +32,7 @@ export default function MediaKitPage() {
 
       <section className="container-x grid gap-12 py-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <Reveal>
-          <Portrait className="aspect-[4/5] w-full" />
+          <Portrait src="/images/portrait-full.jpg" className="aspect-[4/5] w-full" />
           <a href="#" className="btn-primary mt-4 w-full">
             <Download size={15} /> Download headshots
           </a>

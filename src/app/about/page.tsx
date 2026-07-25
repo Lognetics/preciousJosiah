@@ -14,24 +14,24 @@ export const metadata: Metadata = {
 
 const sections = [
   {
-    title: "Who He Is",
-    body: "Precious Josiah Udezua is a Web3 strategist, community builder, fintech advocate, and educator whose work sits at the intersection of technology, finance, human behaviour, and leadership. He is less interested in the mechanics of blockchains than in what they make possible for people who have been historically excluded from the systems that shape modern life.",
+    title: "Who She Is",
+    body: "Precious Josiah Udezua is a Web3 strategist, community builder, fintech advocate, and educator whose work sits at the intersection of technology, finance, human behaviour, and leadership. She is less interested in the mechanics of blockchains than in what they make possible for people who have been historically excluded from the systems that shape modern life.",
   },
   {
-    title: "His Journey",
-    body: "He came to Web3 not as a speculator but as a builder — drawn by a simple conviction that the most powerful technologies are the ones that quietly expand human agency. Over years spent building communities across African cities, running growth campaigns, and advising early-stage projects, a consistent lesson emerged: technology sets the stage, but people write the story.",
+    title: "Her Journey",
+    body: "She came to Web3 not as a speculator but as a builder — drawn by a simple conviction that the most powerful technologies are the ones that quietly expand human agency. Over years spent building communities across African cities, running growth campaigns, and advising early-stage projects, a consistent lesson emerged: technology sets the stage, but people write the story.",
   },
   {
     title: "Mission",
-    body: "To accelerate digital transformation by educating, connecting, and empowering people through emerging technologies — while making innovation more accessible across Africa and beyond. He measures progress not in market cycles, but in the number of people given real access, real understanding, and real opportunity.",
+    body: "To accelerate digital transformation by educating, connecting, and empowering people through emerging technologies — while making innovation more accessible across Africa and beyond. She measures progress not in market cycles, but in the number of people given real access, real understanding, and real opportunity.",
   },
   {
     title: "Vision",
     body: "A digital economy where financial access is a right rather than a privilege, where Africa's youth are protagonists rather than spectators, and where trust — not hype — is the currency that decides which innovations endure.",
   },
   {
-    title: "What Drives Him",
-    body: "A stubborn optimism about people, paired with impatience for systems that fail them. He believes the future of finance will be built by those who refuse to choose between ambition and empathy — and he intends to help build it responsibly.",
+    title: "What Drives Her",
+    body: "A stubborn optimism about people, paired with impatience for systems that fail them. She believes the future of finance will be built by those who refuse to choose between ambition and empathy — and she intends to help build it responsibly.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
 
       <section className="container-x grid gap-12 py-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <Reveal className="lg:sticky lg:top-28">
-          <Portrait className="aspect-[4/5] w-full" />
+          <Portrait src="/images/portrait-about.jpg" className="aspect-[4/5] w-full" />
           <div className="card mt-4 p-5">
             <p className="font-serif text-lg italic">“{site.philosophy}”</p>
           </div>
@@ -73,6 +73,36 @@ export default function AboutPage() {
             </Reveal>
           ))}
         </div>
+      </section>
+
+      {/* Education / journey image band */}
+      <section className="container-x pb-8">
+        <Reveal>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="relative overflow-hidden rounded-3xl border border-[var(--line)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/graduation.jpg"
+                alt="Precious Josiah Udezua at the University of Aberdeen Business School"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <span className="eyebrow">
+                <span className="h-px w-6 bg-royal" /> Education
+              </span>
+              <h2 className="mt-4 font-serif text-3xl font-semibold">
+                Grounded in business, driven by people.
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
+                A graduate of the University of Aberdeen Business School, Precious pairs formal
+                training in business and strategy with years of hands-on community building —
+                a combination that shapes how she translates complex technology into clear,
+                human ideas.
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* Core beliefs */}
