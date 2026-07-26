@@ -14,7 +14,7 @@ const projects = [
   {
     name: "Jesaih",
     tag: "Community & Ecosystem",
-    gradient: "from-[#1E3AAF] via-[#2B59FF] to-[#5B7CFF]",
+    image: "/images/gallery-city.jpg",
     overview:
       "A community-first initiative building Web3 literacy and belonging across African cities — turning newcomers into confident, informed participants.",
     impact: ["25+ communities activated", "Education-first onboarding", "Local-language mentorship"],
@@ -22,7 +22,7 @@ const projects = [
   {
     name: "Rabapay",
     tag: "Fintech & Payments",
-    gradient: "from-[#065F46] via-[#10B981] to-[#34D399]",
+    image: "/images/gallery-yacht.jpg",
     overview:
       "Payment infrastructure focused on making digital money practical for everyday people and businesses — the invisible utility behind real transactions.",
     impact: ["Stablecoin-ready rails", "Cross-border settlement", "Merchant-first design"],
@@ -30,7 +30,7 @@ const projects = [
   {
     name: "Ecosystem Advisory",
     tag: "Strategy & Growth",
-    gradient: "from-[#1E3AAF] via-[#3B2F8F] to-[#10B981]",
+    image: "/images/portrait-seated.jpg",
     overview:
       "Advising early-stage Web3 and fintech teams on positioning, community, and growth — helping great technology actually reach the people it's built for.",
     impact: ["15+ projects supported", "Go-to-market clarity", "Trust-led growth"],
@@ -50,8 +50,15 @@ export default function ProjectsPage() {
         {projects.map((p, i) => (
           <Reveal key={p.name} delay={i * 0.05}>
             <div className="card grid gap-0 overflow-hidden md:grid-cols-[0.9fr_1.1fr]">
-              <div className={`relative min-h-[240px] bg-gradient-to-br ${p.gradient}`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
+              <div className="relative min-h-[280px] overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-midnight/80 via-midnight/25 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <span className="rounded-full bg-black/25 px-3 py-1 text-xs font-medium text-white backdrop-blur">
                     {p.tag}

@@ -18,12 +18,12 @@ const categories = [
 ];
 
 const items = [
-  { type: "Podcast", title: "The Stablecoin Decade", outlet: "Future of Money Podcast", gradient: "from-[#1E3AAF] to-[#5B7CFF]" },
-  { type: "Keynote", title: "A Generation of Builders", outlet: "Blockchain & Youth Forum", gradient: "from-[#065F46] to-[#34D399]" },
-  { type: "Interview", title: "Why Community Beats Hype", outlet: "Web3 Africa Weekly", gradient: "from-[#3B2F8F] to-[#2B59FF]" },
-  { type: "Panel", title: "Beyond the Hype: DeFi's Real Users", outlet: "DeFi Africa", gradient: "from-[#0A0B0F] to-[#2B3040]" },
-  { type: "Feature", title: "Voices Shaping African Fintech", outlet: "Innovation Review", gradient: "from-[#7C3A12] to-[#F59E0B]" },
-  { type: "AMA", title: "Ask Me Anything: Stablecoins", outlet: "Community Session", gradient: "from-[#065F46] to-[#10B981]" },
+  { type: "Podcast", title: "The Stablecoin Decade", outlet: "Future of Money Podcast", image: "/images/gallery-lounge.jpg" },
+  { type: "Keynote", title: "A Generation of Builders", outlet: "Blockchain & Youth Forum", image: "/images/portrait-hero.jpg" },
+  { type: "Interview", title: "Why Community Beats Hype", outlet: "Web3 Africa Weekly", image: "/images/gallery-city.jpg" },
+  { type: "Panel", title: "Beyond the Hype: DeFi's Real Users", outlet: "DeFi Africa", image: "/images/portrait-seated.jpg" },
+  { type: "Feature", title: "Voices Shaping African Fintech", outlet: "Innovation Review", image: "/images/gallery-gown.jpg" },
+  { type: "AMA", title: "Ask Me Anything: Stablecoins", outlet: "Community Session", image: "/images/gallery-aberdeen.jpg" },
 ];
 
 export default function MediaPage() {
@@ -52,7 +52,15 @@ export default function MediaPage() {
           {items.map((m, i) => (
             <Reveal key={m.title} delay={(i % 3) * 0.06}>
               <div className="card group overflow-hidden">
-                <div className={`relative aspect-video bg-gradient-to-br ${m.gradient}`}>
+                <div className="relative aspect-video overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={m.image}
+                    alt={m.title}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-midnight/35" />
                   <div className="absolute inset-0 grid place-items-center">
                     <span className="grid h-14 w-14 place-items-center rounded-full bg-white/20 backdrop-blur transition-transform duration-500 group-hover:scale-110">
                       <Play size={20} className="translate-x-0.5 text-white" fill="white" />

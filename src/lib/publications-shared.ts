@@ -8,7 +8,8 @@ export type Publication = {
   tags: string[];
   date: string;
   featured: boolean;
-  cover: string; // gradient token id
+  cover: string; // gradient token id (fallback tint)
+  image: string; // hero/cover photo path
   readingTime: string;
   content: string;
 };

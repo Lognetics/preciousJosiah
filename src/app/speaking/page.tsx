@@ -70,7 +70,17 @@ export default function SpeakingPage() {
         </div>
 
         <Reveal delay={0.1}>
-          <div className="card sticky top-28 p-8">
+          <div className="card sticky top-28 overflow-hidden">
+            <div className="relative">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/portrait-hero.jpg"
+                alt="Precious Josiah Udezua speaking"
+                className="aspect-[16/10] w-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--card)] to-transparent" />
+            </div>
+            <div className="p-8 pt-2">
             <h3 className="font-serif text-2xl font-semibold">Book Precious to speak</h3>
             <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
               Share your event details and preferred date. Available for keynotes, panels,
@@ -101,6 +111,7 @@ export default function SpeakingPage() {
                 <dd>English</dd>
               </div>
             </dl>
+            </div>
           </div>
         </Reveal>
       </section>

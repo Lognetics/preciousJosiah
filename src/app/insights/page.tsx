@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
+import { SplitFeature } from "@/components/ui/split-feature";
 import { PublicationCard } from "@/components/publication-card";
 import { getAllPublications } from "@/lib/publications";
 
@@ -59,7 +60,16 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="border-t border-[var(--line)] bg-[var(--card)]">
+      <SplitFeature
+        image="/images/portrait-full.jpg"
+        alt="Precious Josiah Udezua"
+        eyebrow="The Through-Line"
+        title="One idea runs through all of it."
+        body="Across community building, stablecoins, DeFi, and leadership, the argument never changes: technology is the enabler, and people — their trust, literacy, and access — are what turn possibility into lasting impact."
+        tint
+      />
+
+      <section className="border-t border-[var(--line)] bg-[var(--bg)]">
         <div className="container-x py-16">
           <h2 className="font-serif text-2xl font-semibold">Latest publications</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { Navbar } from "@/components/navbar";
@@ -7,17 +7,18 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { PersonSchema } from "@/components/seo/schema";
 
-const sans = Inter({
-  subsets: ["latin"],
+const sans = localFont({
+  src: "./fonts/inter-var.woff2",
   variable: "--font-sans",
   display: "swap",
+  weight: "100 900",
 });
 
-const serif = Fraunces({
-  subsets: ["latin"],
+const serif = localFont({
+  src: "./fonts/fraunces-var.woff2",
   variable: "--font-serif",
   display: "swap",
-  axes: ["opsz"],
+  weight: "300 700",
 });
 
 export const metadata: Metadata = {

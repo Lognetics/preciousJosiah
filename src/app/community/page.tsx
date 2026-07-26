@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MessageCircle, GraduationCap, Network, Calendar, Handshake, BookOpen } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
+import { SplitFeature } from "@/components/ui/split-feature";
 import { NewsletterForm } from "@/components/newsletter-form";
 
 export const metadata: Metadata = {
@@ -34,7 +35,19 @@ export default function CommunityPage() {
         intro="A community built on the belief that adoption is a people problem before it is a technology problem — where members learn safely and grow quickly."
       />
 
-      <section className="container-x py-16">
+      <SplitFeature
+        image="/images/gallery-city.jpg"
+        alt="Precious Josiah Udezua"
+        eyebrow="Why It Matters"
+        title="Belonging is the real onboarding."
+        body="The fastest way to lose a community is to extract before you educate. Ours does the opposite — learning first, trust always, and a place where a newcomer can ask any question without fear and rise faster than they expected."
+        reverse
+      />
+
+      <section className="container-x pb-16">
+        <Reveal>
+          <h2 className="mb-8 font-serif text-3xl font-semibold">What you'll find inside</h2>
+        </Reveal>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <Reveal key={f.title} delay={(i % 3) * 0.05}>

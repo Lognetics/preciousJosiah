@@ -34,6 +34,14 @@ export default function ContactPage() {
 
         <Reveal delay={0.1}>
           <div className="space-y-4">
+            <div className="relative overflow-hidden rounded-3xl border border-[var(--line)]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/portrait-hero.jpg"
+                alt="Precious Josiah Udezua"
+                className="aspect-[16/10] w-full object-cover object-top"
+              />
+            </div>
             {channels.map((c) => (
               <a
                 key={c.label}

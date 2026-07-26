@@ -36,6 +36,7 @@ export function getPublication(slug: string): Publication | null {
     date: data.date ?? "2025-01-01",
     featured: Boolean(data.featured),
     cover: data.cover ?? "royal",
+    image: data.image ?? "",
     readingTime: stats.text,
     content,
   };

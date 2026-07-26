@@ -64,7 +64,19 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       {/* Hero */}
       <article>
         <header className="relative overflow-hidden border-b border-[var(--line)]">
-          <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${gradient} opacity-[0.14]`} />
+          {p.image ? (
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={p.image}
+                alt={p.title}
+                className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25"
+              />
+              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/70 to-[var(--bg)]/40" />
+            </>
+          ) : (
+            <div className={`absolute inset-0 -z-10 bg-gradient-to-br ${gradient} opacity-[0.14]`} />
+          )}
           <div className="container-x pb-14 pt-32 md:pt-40">
             <nav className="mb-8 flex items-center gap-2 text-sm text-[var(--muted)]">
               <Link href="/publications" className="inline-flex items-center gap-1 hover:text-royal">
