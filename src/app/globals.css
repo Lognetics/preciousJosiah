@@ -27,6 +27,12 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+  /* Reduce typography ~15% on mobile for a tighter, more readable scale */
+  @media (max-width: 767px) {
+    html {
+      font-size: 85%;
+    }
+  }
   body {
     background-color: var(--bg);
     color: var(--fg);
