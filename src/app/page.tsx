@@ -29,7 +29,7 @@ export default function HomePage() {
               <span className="h-px w-6 bg-royal" /> Personal Mission
             </span>
             <h2 className="mt-5 font-serif text-3xl font-semibold leading-tight md:text-4xl">
-              To make innovation more accessible — across Africa and beyond.
+              To make innovation more accessible, across Africa and beyond.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
@@ -38,7 +38,7 @@ export default function HomePage() {
               <span className="text-royal">educating</span>,{" "}
               <span className="text-royal">connecting</span>, and{" "}
               <span className="text-royal">empowering</span> people through emerging
-              technologies — while making innovation more accessible across Africa and
+              technologies, while making innovation more accessible across Africa and
               beyond.
             </p>
           </Reveal>
@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="mesh-hero absolute inset-0 opacity-80" />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="text-display font-semibold">
-              Let's shape the future of finance — together.
+              Let's shape the future of finance, together.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-white/70">
               Invite Precious to speak, collaborate on an ecosystem initiative, or bring

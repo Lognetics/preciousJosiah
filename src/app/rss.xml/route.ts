@@ -29,7 +29,7 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>${esc(site.name)} — Publications</title>
+    <title>${esc(site.name)}, Publications</title>
     <link>${site.url}</link>
     <description>${esc(site.description)}</description>
     <language>en</language>${items}

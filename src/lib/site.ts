@@ -45,14 +45,14 @@ export const topics = [
 ] as const;
 
 export const philosophyCards = [
-  { title: "Technology", body: "An enabler — not the destination. Tools open doors; people decide who walks through." },
+  { title: "Technology", body: "An enabler, not the destination. Tools open doors; people decide who walks through." },
   { title: "Community", body: "The compounding asset of Web3. Trust, belonging, and shared purpose outlast every hype cycle." },
   { title: "Education", body: "Adoption is a literacy problem before it is a technology problem. Clarity is the real onboarding." },
-  { title: "Trust", body: "The scarcest resource in digital finance — and the most durable competitive advantage." },
+  { title: "Trust", body: "The scarcest resource in digital finance, and the most durable competitive advantage." },
   { title: "Innovation", body: "Meaningful when it removes friction from real lives, not when it impresses other builders." },
   { title: "Inclusion", body: "Financial access as a right, not a privilege. The next billion users deserve first-class design." },
   { title: "Leadership", body: "Service, not status. Building ecosystems where others can rise faster than you did." },
-  { title: "Opportunity", body: "Africa's youth as protagonists of the digital economy — not spectators to it." },
+  { title: "Opportunity", body: "Africa's youth as protagonists of the digital economy, not spectators to it." },
 ];
 
 export const stats = [

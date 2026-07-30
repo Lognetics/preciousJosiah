@@ -8,7 +8,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 export const metadata: Metadata = {
   title: "Community",
   description:
-    "Join a community learning, building, and rising together across Web3, fintech, and the digital economy — led by Precious Josiah Udezua.",
+    "Join a community learning, building, and rising together across Web3, fintech, and the digital economy, led by Precious Josiah Udezua.",
 };
 
 const features = [
@@ -32,7 +32,7 @@ export default function CommunityPage() {
       <PageHeader
         eyebrow="Community"
         title="We rise faster, together."
-        intro="A community built on the belief that adoption is a people problem before it is a technology problem — where members learn safely and grow quickly."
+        intro="A community built on the belief that adoption is a people problem before it is a technology problem, where members learn safely and grow quickly."
       />
 
       <SplitFeature
@@ -40,7 +40,7 @@ export default function CommunityPage() {
         alt="Precious Josiah Udezua"
         eyebrow="Why It Matters"
         title="Belonging is the real onboarding."
-        body="The fastest way to lose a community is to extract before you educate. Ours does the opposite — learning first, trust always, and a place where a newcomer can ask any question without fear and rise faster than they expected."
+        body="The fastest way to lose a community is to extract before you educate. Ours does the opposite, learning first, trust always, and a place where a newcomer can ask any question without fear and rise faster than they expected."
         reverse
       />
 

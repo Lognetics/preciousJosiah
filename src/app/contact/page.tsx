@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Precious Josiah Udezua — for speaking requests, media enquiries, partnerships, and consultations.",
+    "Get in touch with Precious Josiah Udezua, for speaking requests, media enquiries, partnerships, and consultations.",
 };
 
 export default function ContactPage() {
@@ -24,7 +24,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Let's start a conversation."
-        intro="Whether it's a keynote, a collaboration, a media feature, or a strategy conversation — I'd love to hear from you."
+        intro="Whether it's a keynote, a collaboration, a media feature, or a strategy conversation, I'd love to hear from you."
       />
 
       <section className="container-x grid gap-10 py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">

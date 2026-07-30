@@ -9,7 +9,7 @@ import { philosophyCards, site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The journey, mission, and beliefs of Precious Josiah Udezua — a Web3 strategist and community builder shaping Africa's digital economy.",
+    "The journey, mission, and beliefs of Precious Josiah Udezua, a Web3 strategist and community builder shaping Africa's digital economy.",
 };
 
 const sections = [
@@ -19,25 +19,25 @@ const sections = [
   },
   {
     title: "Her Journey",
-    body: "She came to Web3 not as a speculator but as a builder — drawn by a simple conviction that the most powerful technologies are the ones that quietly expand human agency. Over years spent building communities across African cities, running growth campaigns, and advising early-stage projects, a consistent lesson emerged: technology sets the stage, but people write the story.",
+    body: "She came to Web3 not as a speculator but as a builder, drawn by a simple conviction that the most powerful technologies are the ones that quietly expand human agency. Over years spent building communities across African cities, running growth campaigns, and advising early-stage projects, a consistent lesson emerged: technology sets the stage, but people write the story.",
   },
   {
     title: "Mission",
-    body: "To accelerate digital transformation by educating, connecting, and empowering people through emerging technologies — while making innovation more accessible across Africa and beyond. She measures progress not in market cycles, but in the number of people given real access, real understanding, and real opportunity.",
+    body: "To accelerate digital transformation by educating, connecting, and empowering people through emerging technologies, while making innovation more accessible across Africa and beyond. She measures progress not in market cycles, but in the number of people given real access, real understanding, and real opportunity.",
   },
   {
     title: "Vision",
-    body: "A digital economy where financial access is a right rather than a privilege, where Africa's youth are protagonists rather than spectators, and where trust — not hype — is the currency that decides which innovations endure.",
+    body: "A digital economy where financial access is a right rather than a privilege, where Africa's youth are protagonists rather than spectators, and where trust, not hype, is the currency that decides which innovations endure.",
   },
   {
     title: "What Drives Her",
-    body: "A stubborn optimism about people, paired with impatience for systems that fail them. She believes the future of finance will be built by those who refuse to choose between ambition and empathy — and she intends to help build it responsibly.",
+    body: "A stubborn optimism about people, paired with impatience for systems that fail them. She believes the future of finance will be built by those who refuse to choose between ambition and empathy, and she intends to help build it responsibly.",
   },
 ];
 
 const beliefs = [
   "Adoption is a literacy problem before it is a technology problem.",
-  "Trust is the scarcest resource in digital finance — and the most durable advantage.",
+  "Trust is the scarcest resource in digital finance, and the most durable advantage.",
   "The best products disappear into people's lives; they don't demand to be understood.",
   "Inclusion that stops at the door is decoration. Inclusion that reaches the roadmap is power.",
   "Communities are measured in trust, not headcount.",
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
                 A graduate of the University of Aberdeen Business School, Precious pairs formal
-                training in business and strategy with years of hands-on community building —
+                training in business and strategy with years of hands-on community building,
                 a combination that shapes how she translates complex technology into clear,
                 human ideas.
               </p>

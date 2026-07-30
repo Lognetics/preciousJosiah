@@ -10,9 +10,9 @@ export default function PrivacyPage() {
       <section className="container-x py-16">
         <div className="prose-editorial mx-auto max-w-reading">
           <p>
-            This website respects your privacy. Personal information you choose to share —
+            This website respects your privacy. Personal information you choose to share,
             such as your email address when subscribing to the newsletter or your details
-            when using the contact form — is used solely to respond to you and to send the
+            when using the contact form, is used solely to respond to you and to send the
             content you requested.
           </p>
           <h2>What we collect</h2>
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
             analytics can be cleared from your browser at any time.
           </p>
           <p className="text-sm text-[var(--muted)]">
-            This is placeholder text — replace with your finalised policy before launch.
+            This is placeholder text, replace with your finalised policy before launch.
           </p>
         </div>
       </section>

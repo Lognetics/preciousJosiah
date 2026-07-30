@@ -6,7 +6,7 @@ import { getAllPublications, getCategories } from "@/lib/publications";
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "A searchable knowledge center on Web3, stablecoins, DeFi, communities, leadership, and Africa's innovation ecosystem — by Precious Josiah Udezua.",
+    "A searchable knowledge center on Web3, stablecoins, DeFi, communities, leadership, and Africa's innovation ecosystem, by Precious Josiah Udezua.",
 };
 
 export default function PublicationsPage() {

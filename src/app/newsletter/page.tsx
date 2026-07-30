@@ -6,7 +6,7 @@ import { NewsletterForm } from "@/components/newsletter-form";
 export const metadata: Metadata = {
   title: "Newsletter",
   description:
-    "Ideas Worth Thinking About — weekly insights on technology, finance, innovation, leadership, and future trends from Precious Josiah Udezua.",
+    "Ideas Worth Thinking About, weekly insights on technology, finance, innovation, leadership, and future trends from Precious Josiah Udezua.",
 };
 
 const covers = [
@@ -23,7 +23,7 @@ export default function NewsletterPage() {
       <PageHeader
         eyebrow="Newsletter"
         title="Ideas worth thinking about."
-        intro="A weekly letter for people who want to understand where technology, finance, and human behaviour are heading — written in plain language, free of hype."
+        intro="A weekly letter for people who want to understand where technology, finance, and human behaviour are heading, written in plain language, free of hype."
       />
 
       <section className="container-x py-16">
@@ -64,7 +64,7 @@ export default function NewsletterPage() {
                   Join 12,000+ readers.
                 </h2>
                 <p className="mt-3 text-[var(--muted)]">
-                  One thoughtful email a week. No spam, no noise — just clear thinking on the
+                  One thoughtful email a week. No spam, no noise, just clear thinking on the
                   future of finance and technology. Unsubscribe anytime.
                 </p>
                 <div className="mt-6">

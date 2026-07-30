@@ -25,7 +25,7 @@ const themes = [
   { title: "Innovation", body: "Meaningful when it removes friction from real lives." },
   { title: "Africa", body: "A generation moving from spectators to protagonists." },
   { title: "Product Strategy", body: "Why great projects still need to be understood." },
-  { title: "Technology", body: "An enabler — never the destination." },
+  { title: "Technology", body: "An enabler, never the destination." },
 ];
 
 export default function InsightsPage() {
@@ -35,7 +35,7 @@ export default function InsightsPage() {
       <PageHeader
         eyebrow="Thought Leadership"
         title="Recurring ideas, examined honestly."
-        intro="The themes that run through every publication — technology as an enabler, and people as the point."
+        intro="The themes that run through every publication, technology as an enabler, and people as the point."
       />
 
       <section className="container-x py-16">
@@ -65,7 +65,7 @@ export default function InsightsPage() {
         alt="Precious Josiah Udezua"
         eyebrow="The Through-Line"
         title="One idea runs through all of it."
-        body="Across community building, stablecoins, DeFi, and leadership, the argument never changes: technology is the enabler, and people — their trust, literacy, and access — are what turn possibility into lasting impact."
+        body="Across community building, stablecoins, DeFi, and leadership, the argument never changes: technology is the enabler, and people, their trust, literacy, and access, are what turn possibility into lasting impact."
         tint
       />
 

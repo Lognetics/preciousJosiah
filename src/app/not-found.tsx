@@ -11,7 +11,7 @@ export default function NotFound() {
         </p>
         <h1 className="mt-4 font-serif text-3xl font-semibold">This page went off-chain.</h1>
         <p className="mx-auto mt-3 max-w-md text-[var(--muted)]">
-          The page you're looking for doesn't exist — but there's plenty of thinking to explore.
+          The page you're looking for doesn't exist, but there's plenty of thinking to explore.
         </p>
         <Link href="/" className="btn-primary mt-8">
           <ArrowLeft size={16} /> Back home

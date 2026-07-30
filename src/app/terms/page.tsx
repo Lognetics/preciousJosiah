@@ -10,8 +10,8 @@ export default function TermsPage() {
       <section className="container-x py-16">
         <div className="prose-editorial mx-auto max-w-reading">
           <p>
-            By using this website you agree to these terms. All content — including articles,
-            essays, and media — is provided for informational and educational purposes only and
+            By using this website you agree to these terms. All content, including articles,
+            essays, and media, is provided for informational and educational purposes only and
             does not constitute financial, investment, or legal advice.
           </p>
           <h2>Intellectual property</h2>
@@ -27,7 +27,7 @@ export default function TermsPage() {
             technologies.
           </p>
           <p className="text-sm text-[var(--muted)]">
-            This is placeholder text — replace with your finalised terms before launch.
+            This is placeholder text, replace with your finalised terms before launch.
           </p>
         </div>
       </section>

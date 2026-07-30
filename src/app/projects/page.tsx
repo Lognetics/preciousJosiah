@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/reveal";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Ecosystem work by Precious Josiah Udezua — including Jesaih and Rabapay — building communities, products, and access across the digital economy.",
+    "Ecosystem work by Precious Josiah Udezua, including Jesaih and Rabapay, building communities, products, and access across the digital economy.",
 };
 
 const projects = [
@@ -16,7 +16,7 @@ const projects = [
     tag: "Community & Ecosystem",
     image: "/images/gallery-city.jpg",
     overview:
-      "A community-first initiative building Web3 literacy and belonging across African cities — turning newcomers into confident, informed participants.",
+      "A community-first initiative building Web3 literacy and belonging across African cities, turning newcomers into confident, informed participants.",
     impact: ["25+ communities activated", "Education-first onboarding", "Local-language mentorship"],
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     tag: "Fintech & Payments",
     image: "/images/gallery-yacht.jpg",
     overview:
-      "Payment infrastructure focused on making digital money practical for everyday people and businesses — the invisible utility behind real transactions.",
+      "Payment infrastructure focused on making digital money practical for everyday people and businesses, the invisible utility behind real transactions.",
     impact: ["Stablecoin-ready rails", "Cross-border settlement", "Merchant-first design"],
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     tag: "Strategy & Growth",
     image: "/images/portrait-seated.jpg",
     overview:
-      "Advising early-stage Web3 and fintech teams on positioning, community, and growth — helping great technology actually reach the people it's built for.",
+      "Advising early-stage Web3 and fintech teams on positioning, community, and growth, helping great technology actually reach the people it's built for.",
     impact: ["15+ projects supported", "Go-to-market clarity", "Trust-led growth"],
   },
 ];
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
     <>
       <PageHeader
         eyebrow="Projects"
-        title="Building the rails — and the trust that runs on them."
+        title="Building the rails, and the trust that runs on them."
         intro="Selected ecosystem contributions where technology meets real adoption. Each is grounded in the same belief: utility over speculation, people over hype."
       />
 

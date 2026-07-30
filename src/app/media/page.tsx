@@ -32,7 +32,7 @@ export default function MediaPage() {
       <PageHeader
         eyebrow="Media"
         title="Conversations, keynotes, and coverage."
-        intro="A hub of interviews, podcasts, talks, and features — the ongoing public conversation around technology, finance, and people."
+        intro="A hub of interviews, podcasts, talks, and features, the ongoing public conversation around technology, finance, and people."
       />
 
       <section className="container-x py-16">

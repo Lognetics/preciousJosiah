@@ -1,10 +1,10 @@
-# Precious Josiah Udezua — Personal Brand Website
+# Precious Josiah Udezua, Personal Brand Website
 
 An elegant, editorial, world-class personal brand website positioning **Precious Josiah Udezua** as a leading voice in Web3, stablecoins, DeFi, digital economy, community building, and Africa's innovation ecosystem.
 
 > _Technology creates possibilities. People create impact._
 
-Built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and an **MDX** content system. Apple-level minimalism — dark/light premium theme, editorial typography, glassmorphism, micro-interactions. No neon crypto aesthetics.
+Built with **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and an **MDX** content system. Apple-level minimalism, dark/light premium theme, editorial typography, glassmorphism, micro-interactions. No neon crypto aesthetics.
 
 ## Getting started
 
@@ -24,7 +24,7 @@ npm start          # serve the production build
 | **Reading experience** | Reading progress bar, bookmark, text-to-speech (audio reader), share, print, related/suggested reading |
 | **Design system** | `tailwind.config.ts` (colors, type scale, animations) + `src/app/globals.css` (editorial prose, glass, mesh gradients) |
 | **Theme** | Dark/light toggle with no-flash inline script, persisted to `localStorage` |
-| **Animations** | Framer Motion reveals, animated stat counters, hero blockchain network backdrop, marquee trust bar — all respect `prefers-reduced-motion` |
+| **Animations** | Framer Motion reveals, animated stat counters, hero blockchain network backdrop, marquee trust bar, all respect `prefers-reduced-motion` |
 | **SEO** | Person / Article / Breadcrumb JSON-LD, dynamic OG image, Open Graph + Twitter cards, `sitemap.xml`, `robots.txt`, `rss.xml`, web manifest, per-page metadata, canonical URLs |
 | **Accessibility** | Skip link, focus rings, semantic landmarks, reduced-motion support |
 

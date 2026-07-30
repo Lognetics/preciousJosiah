@@ -29,7 +29,7 @@ export function ContactForm() {
         </span>
         <h3 className="font-serif text-2xl font-semibold">Message received.</h3>
         <p className="max-w-sm text-[var(--muted)]">
-          Thank you for reaching out. You'll get a reply soon — usually within a few business days.
+          Thank you for reaching out. You'll get a reply soon, usually within a few business days.
         </p>
       </div>
     );

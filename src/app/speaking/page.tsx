@@ -23,10 +23,10 @@ const topics = [
 ];
 
 const events = [
-  { name: "Africa Fintech Summit", role: "Keynote — The Stablecoin Decade", year: "2025" },
-  { name: "Web3 Lagos Conference", role: "Panel — Building Communities That Last", year: "2025" },
-  { name: "DeFi Africa", role: "Fireside — Beyond the Hype", year: "2024" },
-  { name: "Blockchain & Youth Forum", role: "Keynote — A Generation of Builders", year: "2024" },
+  { name: "Africa Fintech Summit", role: "Keynote, The Stablecoin Decade", year: "2025" },
+  { name: "Web3 Lagos Conference", role: "Panel, Building Communities That Last", year: "2025" },
+  { name: "DeFi Africa", role: "Fireside, Beyond the Hype", year: "2024" },
+  { name: "Blockchain & Youth Forum", role: "Keynote, A Generation of Builders", year: "2024" },
 ];
 
 export default function SpeakingPage() {
@@ -35,7 +35,7 @@ export default function SpeakingPage() {
       <PageHeader
         eyebrow="Speaking"
         title="Speaking about the future of technology."
-        intro="Keynotes, panels, and fireside conversations that translate complex technology into clear, human ideas — for audiences from boardrooms to universities."
+        intro="Keynotes, panels, and fireside conversations that translate complex technology into clear, human ideas, for audiences from boardrooms to universities."
       />
 
       <section className="container-x grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr]">

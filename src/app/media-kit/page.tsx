@@ -17,7 +17,7 @@ const bios = [
   },
   {
     label: "Medium bio",
-    text: `${site.name} is a Web3 strategist, community builder, fintech advocate, and thought leader. Her work sits at the intersection of technology, finance, human behaviour, and leadership — with a consistent focus on making innovation accessible across Africa and beyond. She writes and speaks widely on stablecoins, DeFi, community building, and financial inclusion.`,
+    text: `${site.name} is a Web3 strategist, community builder, fintech advocate, and thought leader. Her work sits at the intersection of technology, finance, human behaviour, and leadership, with a consistent focus on making innovation accessible across Africa and beyond. She writes and speaks widely on stablecoins, DeFi, community building, and financial inclusion.`,
   },
 ];
 
