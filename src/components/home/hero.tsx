@@ -11,6 +11,7 @@ const slides = [
   {
     src: "/images/portrait-hero.jpg",
     heading: "Building at the intersection of Africa, Web3 and digital finance.",
+    accent: "Africa, Web3 and digital finance.",
     text: "Web3 & fintech builder, educator and ecosystem contributor working across blockchain, stablecoins and Africa's innovation ecosystem.",
   },
   {
@@ -48,43 +49,53 @@ export function Hero() {
   const active = slides[index];
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Background slideshow */}
-      <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden>
+    <section className="relative overflow-hidden bg-[#08090d] text-white">
+      {/* Background slideshow (always dark, photos kept visible) */}
+      <div className="absolute inset-0 overflow-hidden" aria-hidden>
         {slides.map((slide, i) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img
             key={slide.src}
             src={slide.src}
             alt=""
-            className={`absolute inset-0 h-full w-full object-cover object-[50%_28%] transition-opacity duration-[1400ms] ease-in-out ${
+            className={`absolute inset-0 h-full w-full object-cover object-[50%_26%] transition-opacity duration-[1400ms] ease-in-out ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
+
+        {/* Brand gradient fill overlapping the images */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(90deg, var(--bg) 0%, var(--bg) 30%, color-mix(in srgb, var(--bg) 62%, transparent) 55%, color-mix(in srgb, var(--bg) 20%, transparent) 80%, transparent 100%)",
+              "linear-gradient(120deg, rgba(43,89,255,0.45) 0%, rgba(10,11,15,0.15) 46%, rgba(16,185,129,0.32) 100%)",
+          }}
+        />
+        {/* Legibility scrims */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(6,7,10,0.92) 0%, rgba(6,7,10,0.72) 34%, rgba(6,7,10,0.36) 64%, rgba(6,7,10,0.12) 100%)",
           }}
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, var(--bg) 0%, transparent 18%, transparent 62%, var(--bg) 100%)",
+              "linear-gradient(180deg, rgba(6,7,10,0.72) 0%, transparent 22%, transparent 64%, rgba(6,7,10,0.9) 100%)",
           }}
         />
       </div>
 
-      <div className="container-x flex min-h-[88vh] flex-col justify-center pb-24 pt-36 md:min-h-[92vh] md:pt-44">
+      <div className="container-x relative flex min-h-[90vh] flex-col justify-center pb-24 pt-36 md:min-h-[94vh] md:pt-44">
         <div className="max-w-2xl">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="eyebrow"
+            className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-royal-soft"
           >
             <Sparkles size={14} /> {site.role}
           </motion.span>
@@ -99,17 +110,17 @@ export function Hero() {
                 exit={{ opacity: 0, y: -18 }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               >
-                <h1 className="text-display font-semibold">
-                  {index === 0 ? (
+                <h1 className="text-display font-semibold text-white">
+                  {active.accent ? (
                     <>
-                      Building at the intersection of{" "}
-                      <span className="text-royal">Africa, Web3 and digital finance.</span>
+                      {active.heading.replace(active.accent, "")}
+                      <span className="text-royal-soft">{active.accent}</span>
                     </>
                   ) : (
                     active.heading
                   )}
                 </h1>
-                <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--muted)]">
+                <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">
                   {active.text}
                 </p>
               </motion.div>
@@ -120,7 +131,10 @@ export function Hero() {
             <Link href="#work" className="btn-primary">
               Explore My Work <ArrowRight size={16} />
             </Link>
-            <Link href="/contact" className="btn-ghost">
+            <Link
+              href="/contact"
+              className="btn border border-white/30 text-white transition-colors hover:bg-white/10"
+            >
               Invite Me to Speak
             </Link>
           </div>
@@ -133,7 +147,7 @@ export function Hero() {
                 onClick={() => setIndex(i)}
                 aria-label={`Show slide ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-500 ${
-                  i === index ? "w-7 bg-royal" : "w-2.5 bg-[var(--muted)]/40 hover:bg-[var(--muted)]"
+                  i === index ? "w-7 bg-royal-soft" : "w-2.5 bg-white/35 hover:bg-white/70"
                 }`}
               />
             ))}
