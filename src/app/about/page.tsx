@@ -4,74 +4,68 @@ import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Portrait } from "@/components/ui/portrait";
 import { Reveal } from "@/components/ui/reveal";
-import { philosophyCards, site } from "@/lib/site";
+import { workAreas } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The journey, mission, and beliefs of Precious Josiah Udezua, a Web3 strategist and community builder shaping Africa's digital economy.",
+    "Precious Josiah Cheta-Udezue is a Web3 and fintech builder, educator and ecosystem contributor working across digital finance, stablecoins and Africa's digital economy.",
 };
 
-const sections = [
-  {
-    title: "Who She Is",
-    body: "Precious Josiah Udezua is a Web3 strategist, community builder, fintech advocate, and educator whose work sits at the intersection of technology, finance, human behaviour, and leadership. She is less interested in the mechanics of blockchains than in what they make possible for people who have been historically excluded from the systems that shape modern life.",
-  },
-  {
-    title: "Her Journey",
-    body: "She came to Web3 not as a speculator but as a builder, drawn by a simple conviction that the most powerful technologies are the ones that quietly expand human agency. Over years spent building communities across African cities, running growth campaigns, and advising early-stage projects, a consistent lesson emerged: technology sets the stage, but people write the story.",
-  },
-  {
-    title: "Mission",
-    body: "To accelerate digital transformation by educating, connecting, and empowering people through emerging technologies, while making innovation more accessible across Africa and beyond. She measures progress not in market cycles, but in the number of people given real access, real understanding, and real opportunity.",
-  },
-  {
-    title: "Vision",
-    body: "A digital economy where financial access is a right rather than a privilege, where Africa's youth are protagonists rather than spectators, and where trust, not hype, is the currency that decides which innovations endure.",
-  },
-  {
-    title: "What Drives Her",
-    body: "A stubborn optimism about people, paired with impatience for systems that fail them. She believes the future of finance will be built by those who refuse to choose between ambition and empathy, and she intends to help build it responsibly.",
-  },
+const paragraphs = [
+  "My work has grown from Web3 education and community building into broader work across emerging technology, digital finance and fintech.",
+  "Over the years, I have worked across education, community building, ecosystem development, content and speaking.",
+  "Today, my interests sit across Web3, digital finance, stablecoins, fintech, cross-border payments, financial inclusion and Africa's digital economy.",
+  "I am particularly interested in the space between technology and adoption: whether people can understand it, trust it and actually use it.",
 ];
 
-const beliefs = [
-  "Adoption is a literacy problem before it is a technology problem.",
-  "Trust is the scarcest resource in digital finance, and the most durable advantage.",
-  "The best products disappear into people's lives; they don't demand to be understood.",
-  "Inclusion that stops at the door is decoration. Inclusion that reaches the roadmap is power.",
-  "Communities are measured in trust, not headcount.",
-  "Technology creates possibilities. People create impact.",
-];
+const progression = ["Web3", "Education", "Community", "Ecosystem", "Fintech", "Digital Finance"];
 
 export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Meet Precious"
-        title="Technology sets the stage. People write the story."
-        intro={site.description}
+        eyebrow="About Precious"
+        title="Building, teaching and connecting across emerging technology."
+        intro="My journey through Web3 has always been about building: building communities, creating opportunities, and helping people understand and participate in emerging technology."
       />
 
       <section className="container-x grid gap-12 py-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <Reveal className="lg:sticky lg:top-28">
           <Portrait src="/images/portrait-about.jpg" className="aspect-[4/5] w-full" />
-          <div className="card mt-4 p-5">
-            <p className="font-serif text-lg italic">“{site.philosophy}”</p>
-          </div>
         </Reveal>
 
-        <div className="space-y-12">
-          {sections.map((s, i) => (
-            <Reveal key={s.title} delay={i * 0.04}>
-              <div>
-                <span className="eyebrow">
-                  <span className="h-px w-6 bg-royal" /> {s.title}
-                </span>
-                <p className="mt-4 text-lg leading-relaxed text-[var(--fg)]/90">{s.body}</p>
+        <div>
+          <div className="space-y-6 text-lg leading-relaxed text-[var(--fg)]/90">
+            {paragraphs.map((p, i) => (
+              <Reveal key={i} delay={i * 0.04}>
+                <p>{p}</p>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Progression - how the work has evolved */}
+          <Reveal delay={0.1}>
+            <div className="mt-10 border-t border-[var(--line)] pt-8">
+              <span className="eyebrow">
+                <span className="h-px w-6 bg-royal" /> The path so far
+              </span>
+              <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+                {progression.map((step, i) => (
+                  <span key={step} className="flex items-center gap-3">
+                    <span className="font-serif text-lg">{step}</span>
+                    {i < progression.length - 1 && (
+                      <ArrowRight size={15} className="text-royal" />
+                    )}
+                  </span>
+                ))}
               </div>
-            </Reveal>
-          ))}
+              <p className="mt-4 max-w-xl text-[var(--muted)]">
+                My fintech work is an evolution of what I have been doing for years, not a
+                departure from it.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -83,7 +77,7 @@ export default function AboutPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/graduation.jpg"
-                alt="Precious Josiah Udezua at the University of Aberdeen Business School"
+                alt="Precious Josiah Cheta-Udezue at the University of Aberdeen Business School"
                 className="h-full w-full object-cover"
               />
             </div>
@@ -95,64 +89,47 @@ export default function AboutPage() {
                 Grounded in business, driven by people.
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-                A graduate of the University of Aberdeen Business School, Precious pairs formal
-                training in business and strategy with years of hands-on community building,
-                a combination that shapes how she translates complex technology into clear,
-                human ideas.
+                A graduate of the University of Aberdeen Business School, I pair formal training
+                in business and strategy with years of hands-on community building. It shapes how
+                I translate complex technology into something people can actually understand and use.
               </p>
             </div>
           </div>
         </Reveal>
       </section>
 
-      {/* Core beliefs */}
-      <section className="border-y border-[var(--line)] bg-[var(--card)]">
+      {/* Areas of focus */}
+      <section className="border-t border-[var(--line)] bg-[var(--card)]">
         <div className="container-x py-20">
           <Reveal>
-            <h2 className="max-w-2xl font-serif text-3xl font-semibold md:text-4xl">
-              Core beliefs that recur across every publication.
+            <span className="eyebrow">
+              <span className="h-px w-6 bg-royal" /> What I Work On
+            </span>
+            <h2 className="mt-4 max-w-2xl font-serif text-3xl font-semibold md:text-4xl">
+              Where my work sits today.
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {beliefs.map((b, i) => (
-              <Reveal key={b} delay={(i % 2) * 0.06}>
-                <div className="flex gap-4">
-                  <span className="font-serif text-2xl text-royal">0{i + 1}</span>
-                  <p className="text-lg leading-relaxed">{b}</p>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {workAreas.map((a, i) => (
+              <Reveal key={a.title} delay={(i % 2) * 0.05}>
+                <div className="card h-full p-6">
+                  <h3 className="font-serif text-xl font-semibold">{a.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{a.body}</p>
                 </div>
               </Reveal>
             ))}
           </div>
+          <Reveal>
+            <div className="mt-12 flex flex-wrap gap-3">
+              <Link href="/publications" className="btn-primary">
+                Read My Writing <ArrowRight size={16} />
+              </Link>
+              <Link href="/contact" className="btn-ghost">
+                Get in Touch
+              </Link>
+            </div>
+          </Reveal>
         </div>
-      </section>
-
-      {/* Philosophy cards */}
-      <section className="container-x py-20">
-        <Reveal>
-          <span className="eyebrow">
-            <span className="h-px w-6 bg-royal" /> Professional Philosophy
-          </span>
-          <h2 className="mt-4 max-w-2xl text-display font-semibold">
-            The values behind the work.
-          </h2>
-        </Reveal>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {philosophyCards.map((c, i) => (
-            <Reveal key={c.title} delay={(i % 4) * 0.05}>
-              <div className="card h-full p-6">
-                <h3 className="font-serif text-xl font-semibold">{c.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{c.body}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal>
-          <div className="mt-12">
-            <Link href="/publications" className="btn-primary">
-              Explore the writing <ArrowRight size={16} />
-            </Link>
-          </div>
-        </Reveal>
       </section>
     </>
   );

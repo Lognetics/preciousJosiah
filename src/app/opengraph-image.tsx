@@ -52,22 +52,22 @@ export default function OG() {
           <div style={{ fontSize: 24, opacity: 0.8 }}>{site.role}</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>
-            Technology Doesn't
+          <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -2 }}>
+            Building at the
           </div>
-          <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05, letterSpacing: -2 }}>
-            Change the World.
+          <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -2 }}>
+            intersection of Africa,
           </div>
           <div
             style={{
-              fontSize: 76,
+              fontSize: 62,
               fontWeight: 700,
-              lineHeight: 1.05,
+              lineHeight: 1.08,
               letterSpacing: -2,
               color: "#5B7CFF",
             }}
           >
-            People Do.
+            Web3 & digital finance.
           </div>
         </div>
         <div style={{ fontSize: 30, opacity: 0.85 }}>{site.name}</div>

@@ -64,7 +64,7 @@ const line = {
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.15 + i * 0.12, duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    transition: { delay: 0.12 + i * 0.12, duration: 0.8, ease: [0.16, 1, 0.3, 1] },
   }),
 };
 
@@ -85,60 +85,44 @@ export function Hero() {
           </motion.span>
 
           <h1 className="mt-6 text-hero font-semibold">
-            {["Technology Doesn't", "Change the World.", "People Do."].map((t, i) => (
-              <motion.span
-                key={t}
-                custom={i}
-                variants={line}
-                initial="hidden"
-                animate="show"
-                className="block"
-              >
-                {i === 2 ? <span className="text-royal">{t}</span> : t}
-              </motion.span>
-            ))}
+            <motion.span custom={0} variants={line} initial="hidden" animate="show" className="block">
+              Building at the intersection of
+            </motion.span>
+            <motion.span custom={1} variants={line} initial="hidden" animate="show" className="block text-royal">
+              Africa, Web3 and digital finance.
+            </motion.span>
           </h1>
 
           <motion.p
-            custom={3}
+            custom={2}
             variants={line}
             initial="hidden"
             animate="show"
             className="mt-7 max-w-xl text-lg leading-relaxed text-[var(--muted)]"
           >
-            {site.description}
+            {site.heroSub}
           </motion.p>
 
           <motion.div
-            custom={4}
+            custom={3}
             variants={line}
             initial="hidden"
             animate="show"
             className="mt-9 flex flex-wrap items-center gap-3"
           >
-            <Link href="/publications" className="btn-primary">
-              Read My Insights <ArrowRight size={16} />
+            <Link href="#work" className="btn-primary">
+              Explore My Work <ArrowRight size={16} />
             </Link>
-            <Link href="/speaking" className="btn-ghost">
-              Book Me To Speak
+            <Link href="/contact" className="btn-ghost">
+              Invite Me to Speak
             </Link>
           </motion.div>
-
-          <motion.p
-            custom={5}
-            variants={line}
-            initial="hidden"
-            animate="show"
-            className="mt-10 max-w-md font-serif text-lg italic text-[var(--fg)]"
-          >
-            “{site.philosophy}”
-          </motion.p>
         </div>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ delay: 0.25, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
           <Portrait src="/images/portrait-hero.jpg" className="aspect-[4/5] w-full shadow-card" />

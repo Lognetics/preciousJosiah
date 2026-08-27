@@ -3,114 +3,97 @@ import Link from "next/link";
 import { ArrowRight, Download, Mic } from "lucide-react";
 import { PageHeader } from "@/components/ui/page-header";
 import { Reveal } from "@/components/ui/reveal";
+import { speakingTopics } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Speaking",
   description:
-    "Book Precious Josiah Udezua to speak on the future of finance, stablecoins, Web3, community building, and Africa's digital economy.",
+    "Precious Josiah Cheta-Udezue speaks about cross-border payments, stablecoins, digital finance, Web3 and Africa's digital economy.",
 };
-
-const topics = [
-  "Future of Finance",
-  "Stablecoins & Digital Money",
-  "Web3 Community Building",
-  "Innovation & the Digital Economy",
-  "Leadership in Emerging Tech",
-  "Africa's Innovation Ecosystem",
-  "Financial Inclusion",
-  "Youth Empowerment",
-  "Behavioural Psychology in Tech",
-];
-
-const events = [
-  { name: "Africa Fintech Summit", role: "Keynote, The Stablecoin Decade", year: "2025" },
-  { name: "Web3 Lagos Conference", role: "Panel, Building Communities That Last", year: "2025" },
-  { name: "DeFi Africa", role: "Fireside, Beyond the Hype", year: "2024" },
-  { name: "Blockchain & Youth Forum", role: "Keynote, A Generation of Builders", year: "2024" },
-];
 
 export default function SpeakingPage() {
   return (
     <>
       <PageHeader
         eyebrow="Speaking"
-        title="Speaking about the future of technology."
-        intro="Keynotes, panels, and fireside conversations that translate complex technology into clear, human ideas, for audiences from boardrooms to universities."
+        title="I speak about the technologies changing how Africa builds, connects and moves money."
+        intro="Talks and conversations that make Web3, digital finance and fintech clear and practical, for audiences from boardrooms to universities and community events."
       />
 
       <section className="container-x grid gap-12 py-16 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <Reveal>
-            <h2 className="font-serif text-2xl font-semibold">Signature topics</h2>
+            <h2 className="font-serif text-2xl font-semibold">Speaking topics</h2>
           </Reveal>
-          <div className="mt-6 flex flex-wrap gap-2.5">
-            {topics.map((t, i) => (
-              <Reveal key={t} delay={(i % 5) * 0.03}>
-                <span className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-4 py-2 text-sm">
-                  <Mic size={14} className="text-royal" /> {t}
+          <div className="mt-6 grid gap-2.5 sm:grid-cols-2">
+            {speakingTopics.map((t, i) => (
+              <Reveal key={t} delay={(i % 4) * 0.03}>
+                <span className="flex items-start gap-2.5 rounded-xl border border-[var(--line)] px-4 py-3 text-sm">
+                  <Mic size={15} className="mt-0.5 shrink-0 text-royal" /> {t}
                 </span>
               </Reveal>
             ))}
           </div>
 
+          {/*
+            To add credibility, list real past engagements here (event, role, year).
+            Left out for now so nothing is claimed that cannot be substantiated.
+          */}
           <Reveal>
-            <h2 className="mt-12 font-serif text-2xl font-semibold">Selected engagements</h2>
+            <div className="mt-12 rounded-2xl border border-dashed border-[var(--line)] p-6 text-sm text-[var(--muted)]">
+              Selected past engagements and talk recordings will be added here. Have footage or a
+              photo from an event I spoke at?{" "}
+              <Link href="/contact" className="text-royal link-underline">
+                Send it over
+              </Link>
+              .
+            </div>
           </Reveal>
-          <div className="mt-6 divide-y divide-[var(--line)]">
-            {events.map((e) => (
-              <div key={e.name} className="flex items-center justify-between gap-4 py-4">
-                <div>
-                  <p className="font-medium">{e.name}</p>
-                  <p className="text-sm text-[var(--muted)]">{e.role}</p>
-                </div>
-                <span className="text-sm text-[var(--muted)]">{e.year}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         <Reveal delay={0.1}>
           <div className="card sticky top-28 overflow-hidden">
             <div className="relative">
+              {/* Replace with a real photograph from a speaking engagement when available. */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/portrait-hero.jpg"
-                alt="Precious Josiah Udezua speaking"
+                alt="Precious Josiah Cheta-Udezue"
                 className="aspect-[16/10] w-full object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--card)] to-transparent" />
             </div>
             <div className="p-8 pt-2">
-            <h3 className="font-serif text-2xl font-semibold">Book Precious to speak</h3>
-            <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
-              Share your event details and preferred date. Available for keynotes, panels,
-              workshops, and virtual sessions worldwide.
-            </p>
-            <Link href="/contact" className="btn-primary mt-6 w-full">
-              Request availability <ArrowRight size={16} />
-            </Link>
-            <div className="mt-4 grid gap-2">
-              <a href="/media-kit" className="btn-ghost w-full">
-                <Download size={15} /> Download media kit
-              </a>
-              <a href="/media-kit" className="btn-ghost w-full">
-                <Download size={15} /> Download bio & headshots
-              </a>
-            </div>
-            <dl className="mt-8 space-y-3 border-t border-[var(--line)] pt-6 text-sm">
-              <div className="flex justify-between">
-                <dt className="text-[var(--muted)]">Formats</dt>
-                <dd>Keynote · Panel · Workshop</dd>
+              <h3 className="font-serif text-2xl font-semibold">Invite me to speak</h3>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
+                Share your event details and preferred date. Available for keynotes, panels,
+                workshops and virtual sessions.
+              </p>
+              <Link href="/contact" className="btn-primary mt-6 w-full">
+                Request availability <ArrowRight size={16} />
+              </Link>
+              <div className="mt-4 grid gap-2">
+                <a href="/media-kit" className="btn-ghost w-full">
+                  <Download size={15} /> Download media kit
+                </a>
+                <a href="/media-kit" className="btn-ghost w-full">
+                  <Download size={15} /> Download bio & headshots
+                </a>
               </div>
-              <div className="flex justify-between">
-                <dt className="text-[var(--muted)]">Availability</dt>
-                <dd>Global · In-person & virtual</dd>
-              </div>
-              <div className="flex justify-between">
-                <dt className="text-[var(--muted)]">Languages</dt>
-                <dd>English</dd>
-              </div>
-            </dl>
+              <dl className="mt-8 space-y-3 border-t border-[var(--line)] pt-6 text-sm">
+                <div className="flex justify-between">
+                  <dt className="text-[var(--muted)]">Formats</dt>
+                  <dd>Keynote · Panel · Workshop</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[var(--muted)]">Availability</dt>
+                  <dd>In-person & virtual</dd>
+                </div>
+                <div className="flex justify-between">
+                  <dt className="text-[var(--muted)]">Languages</dt>
+                  <dd>English</dd>
+                </div>
+              </dl>
             </div>
           </div>
         </Reveal>

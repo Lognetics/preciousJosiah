@@ -14,7 +14,7 @@ export function Footer() {
         <div className="md:col-span-1">
           <Logo tone="light" />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
-            {site.philosophy}
+            {site.footerNote}
           </p>
           <div className="mt-5 flex gap-2">
             {[

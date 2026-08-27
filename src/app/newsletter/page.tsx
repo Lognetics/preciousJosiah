@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 };
 
 const covers = [
-  "Technology",
-  "Finance",
-  "Innovation",
-  "Leadership",
-  "Future Trends",
+  "Web3",
+  "Digital Finance",
+  "Stablecoins",
+  "Fintech",
+  "Africa's Digital Economy",
 ];
 
 export default function NewsletterPage() {
@@ -37,8 +37,8 @@ export default function NewsletterPage() {
                 className="aspect-[4/5] w-full object-cover"
               />
               <div className="glass absolute bottom-4 left-4 right-4 rounded-2xl border border-[var(--line)] p-4">
-                <p className="font-serif text-lg italic">
-                  “Technology creates possibilities. People create impact.”
+                <p className="font-serif text-lg">
+                  Writing on Web3, digital finance and Africa's digital economy.
                 </p>
               </div>
             </div>
@@ -61,11 +61,11 @@ export default function NewsletterPage() {
             <Reveal delay={0.1}>
               <div className="card mt-6 p-8 md:p-10">
                 <h2 className="font-serif text-2xl font-semibold md:text-3xl">
-                  Join 12,000+ readers.
+                  Occasional writing, straight to your inbox.
                 </h2>
                 <p className="mt-3 text-[var(--muted)]">
-                  One thoughtful email a week. No spam, no noise, just clear thinking on the
-                  future of finance and technology. Unsubscribe anytime.
+                  Clear, practical notes on Web3, digital finance and fintech, with no spam and no
+                  noise. Unsubscribe anytime.
                 </p>
                 <div className="mt-6">
                   <NewsletterForm compact />

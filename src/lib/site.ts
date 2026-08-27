@@ -1,19 +1,24 @@
 export const site = {
-  name: "Precious Josiah Udezua",
+  name: "Precious Josiah Cheta-Udezue",
   shortName: "Precious Josiah",
-  role: "Web3 Strategist · Community Builder · Fintech Advocate",
-  tagline: "Building Communities. Shaping Digital Economies. Inspiring the Future of Web3.",
-  altTagline: "Technology is Powerful. People Make It Matter.",
-  philosophy: "Technology creates possibilities. People create impact.",
+  role: "Web3 & Fintech Builder · Educator · Ecosystem Contributor",
+  tagline: "Building at the intersection of Africa, Web3 and digital finance.",
+  // Hero supporting paragraph (also used for meta description).
+  heroSub:
+    "Precious Josiah Cheta-Udezue is a Web3 & Fintech builder working across blockchain, digital finance, stablecoins and Africa's innovation ecosystem. She builds, writes, speaks and works with communities around the technologies shaping the future of finance.",
+  footerNote:
+    "Web3 & Fintech builder, educator and ecosystem contributor working across Africa and beyond.",
   url: "https://preciousjosiah.com",
   email: "hello@preciousjosiah.com",
   description:
-    "Precious Josiah Udezua is a Web3 strategist, community builder, fintech advocate, and thought leader helping shape conversations around blockchain, digital finance, stablecoins, and Africa's innovation ecosystem.",
+    "Precious Josiah Cheta-Udezue is a Web3 and fintech builder working across blockchain, digital finance, stablecoins and Africa's innovation ecosystem. She builds, writes, speaks and works with communities around the technologies shaping the future of finance.",
   socials: {
     linkedin: "https://linkedin.com/in/preciousjosiah",
     twitter: "https://twitter.com/preciousjosiah",
     telegram: "https://t.me/preciousjosiah",
   },
+  // Point this at the live Raba Pay site when it is ready.
+  rabaPayUrl: "/contact",
 } as const;
 
 export const nav = [
@@ -31,55 +36,93 @@ export const nav = [
 
 export const topics = [
   "Web3",
-  "Blockchain",
   "Stablecoins",
-  "DeFi",
-  "Community Building",
-  "Digital Economy",
+  "Digital Finance",
+  "Cross-Border Payments",
   "Financial Inclusion",
-  "Growth Strategy",
-  "Innovation",
-  "Africa",
-  "Leadership",
-  "Future of Finance",
+  "Community Building",
+  "Africa's Digital Economy",
+  "Fintech",
 ] as const;
 
-export const philosophyCards = [
-  { title: "Technology", body: "An enabler, not the destination. Tools open doors; people decide who walks through." },
-  { title: "Community", body: "The compounding asset of Web3. Trust, belonging, and shared purpose outlast every hype cycle." },
-  { title: "Education", body: "Adoption is a literacy problem before it is a technology problem. Clarity is the real onboarding." },
-  { title: "Trust", body: "The scarcest resource in digital finance, and the most durable competitive advantage." },
-  { title: "Innovation", body: "Meaningful when it removes friction from real lives, not when it impresses other builders." },
-  { title: "Inclusion", body: "Financial access as a right, not a privilege. The next billion users deserve first-class design." },
-  { title: "Leadership", body: "Service, not status. Building ecosystems where others can rise faster than you did." },
-  { title: "Opportunity", body: "Africa's youth as protagonists of the digital economy, not spectators to it." },
+// "What I Work On" - kept deliberately short.
+export const workAreas = [
+  {
+    title: "Digital Finance",
+    body: "Stablecoins, digital assets, cross-border payments and financial inclusion.",
+  },
+  {
+    title: "Web3 & Emerging Technology",
+    body: "Helping people understand and navigate blockchain and emerging technologies.",
+  },
+  {
+    title: "Africa's Digital Economy",
+    body: "Exploring opportunities for African businesses, builders and talent in the digital economy.",
+  },
+  {
+    title: "Education & Community",
+    body: "Building communities, creating educational content and helping more people participate in emerging technology.",
+  },
 ];
 
+// "Selected Work" - what has actually been done.
+export const selectedWork = [
+  {
+    title: "Raba Pay",
+    tag: "Fintech / Digital Finance",
+    body: "Fintech, digital finance and cross-border payments, exploring better ways for money to move across borders.",
+    image: "/images/gallery-yacht.jpg",
+    href: "#raba-pay",
+    cta: "Learn more",
+  },
+  {
+    title: "Web3 & Community Building",
+    tag: "Community / Ecosystem",
+    body: "Building and supporting Web3 communities and ecosystems, and helping more people take part in emerging technology.",
+    image: "/images/gallery-city.jpg",
+    href: "/projects",
+    cta: "Learn more",
+  },
+  {
+    title: "Education & Thought Leadership",
+    tag: "Writing / Speaking",
+    body: "Articles, educational work, interviews and industry conversations on Web3, digital finance and Africa's digital economy.",
+    image: "/images/portrait-seated.jpg",
+    href: "/publications",
+    cta: "Learn more",
+  },
+];
+
+// "Speaking" topics.
+export const speakingTopics = [
+  "The Future of Cross-Border Payments",
+  "Stablecoins & Digital Finance",
+  "Africa's Digital Economy",
+  "Web3 Beyond the Hype",
+  "Financial Inclusion & Emerging Technology",
+  "Building Communities Around Emerging Technology",
+];
+
+// "By the Numbers" - edit values/labels freely; keep only figures you can stand behind.
 export const stats = [
-  { value: 6, suffix: "+", label: "Years in Web3" },
-  { value: 25, suffix: "+", label: "Communities Built" },
+  { value: 5, suffix: "+", label: "Years in Web3" },
+  { value: 20, suffix: "+", label: "Speaking Engagements" },
   { value: 40, suffix: "+", label: "Articles Published" },
-  { value: 60, suffix: "+", label: "Speaking Engagements" },
-  { value: 15, suffix: "+", label: "Projects Supported" },
   { value: 20, suffix: "+", label: "Countries Reached" },
-  { value: 250, suffix: "K+", label: "People Impacted" },
-  { value: 12, suffix: "K+", label: "Newsletter Readers" },
+  { value: 10, suffix: "+", label: "Projects Supported" },
+  { value: 25, suffix: "+", label: "Communities Built & Supported" },
+  { value: 250, suffix: "K+", label: "People Reached" },
 ];
 
 export const expertise = [
-  "Web3 Strategy",
-  "Blockchain Adoption",
-  "Stablecoin Ecosystems",
-  "Digital Economy",
-  "Community Building",
-  "Growth Marketing",
-  "Fintech",
-  "Product Positioning",
-  "Leadership",
-  "Innovation Strategy",
-  "Emerging Technologies",
+  "Digital Finance",
+  "Stablecoins",
+  "Cross-Border Payments",
+  "Web3 & Blockchain",
   "Financial Inclusion",
-  "Digital Transformation",
+  "Community Building",
+  "Ecosystem Development",
+  "Education & Content",
   "Public Speaking",
-  "Youth Development",
+  "Africa's Digital Economy",
 ];

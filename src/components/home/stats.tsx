@@ -11,7 +11,7 @@ export function StatsSection() {
             <span className="h-px w-6 bg-royal-soft" /> By the numbers
           </p>
           <h2 className="mt-4 max-w-2xl text-display font-semibold">
-            Impact measured in people, not just metrics.
+            A track record of building, teaching and connecting.
           </h2>
         </Reveal>
         <div className="mt-14 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4">
