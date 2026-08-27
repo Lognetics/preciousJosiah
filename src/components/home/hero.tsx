@@ -1,61 +1,91 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { site } from "@/lib/site";
-import { Portrait } from "@/components/ui/portrait";
 
-function NetworkBackdrop() {
+// Background slideshow images + the caption that slides in with each. Edit freely.
+const slides = [
+  { src: "/images/portrait-hero.jpg", caption: "Web3 & digital finance" },
+  { src: "/images/portrait-seated.jpg", caption: "Community & ecosystem building" },
+  { src: "/images/portrait-about.jpg", caption: "Education & content" },
+  { src: "/images/gallery-gown.jpg", caption: "Speaking & industry conversations" },
+  { src: "/images/portrait-full.jpg", caption: "Cross-border payments & stablecoins" },
+];
+
+function HeroBackdrop() {
   const reduce = useReducedMotion();
-  // Deterministic pseudo-random nodes (no Math.random for SSR stability)
-  const nodes = Array.from({ length: 26 }, (_, i) => ({
-    x: (i * 137.5) % 100,
-    y: (i * 71.3) % 100,
-    r: 1 + ((i * 7) % 3),
-    d: 3 + ((i * 13) % 6),
-  }));
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (reduce || slides.length < 2) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [reduce]);
 
   return (
-    <svg
-      className="absolute inset-0 -z-10 h-full w-full opacity-[0.35]"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="xMidYMid slice"
-      aria-hidden
-    >
-      <defs>
-        <linearGradient id="edge" x1="0" x2="1">
-          <stop offset="0" stopColor="#2B59FF" stopOpacity="0.5" />
-          <stop offset="1" stopColor="#10B981" stopOpacity="0.2" />
-        </linearGradient>
-      </defs>
-      {nodes.map((n, i) => {
-        const m = nodes[(i + 5) % nodes.length];
-        return (
-          <line
-            key={`l${i}`}
-            x1={n.x}
-            y1={n.y}
-            x2={m.x}
-            y2={m.y}
-            stroke="url(#edge)"
-            strokeWidth="0.15"
-          />
-        );
-      })}
-      {nodes.map((n, i) => (
-        <motion.circle
-          key={`c${i}`}
-          cx={n.x}
-          cy={n.y}
-          r={n.r * 0.28}
-          fill={i % 3 === 0 ? "#10B981" : "#2B59FF"}
-          initial={reduce ? undefined : { opacity: 0.3 }}
-          animate={reduce ? undefined : { opacity: [0.3, 0.9, 0.3] }}
-          transition={{ duration: n.d, repeat: Infinity, ease: "easeInOut" }}
+    <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden>
+      {/* Crossfading images */}
+      {slides.map((slide, i) => (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          key={slide.src}
+          src={slide.src}
+          alt=""
+          className={`absolute inset-0 h-full w-full object-cover object-[50%_28%] transition-opacity duration-[1400ms] ease-in-out ${
+            i === index ? "opacity-100" : "opacity-0"
+          }`}
         />
       ))}
-    </svg>
+
+      {/* Legibility scrims (theme-aware via var(--bg)) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, var(--bg) 0%, var(--bg) 30%, color-mix(in srgb, var(--bg) 62%, transparent) 55%, color-mix(in srgb, var(--bg) 20%, transparent) 80%, transparent 100%)",
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, var(--bg) 0%, transparent 18%, transparent 62%, var(--bg) 100%)",
+        }}
+      />
+
+      {/* Rotating caption + slide indicators */}
+      <div className="absolute bottom-6 right-6 z-10 flex flex-col items-end gap-3 text-right">
+        <div className="h-7 overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={index}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -14 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="font-serif text-lg text-[var(--fg)] md:text-xl"
+            >
+              {slides[index].caption}
+            </motion.p>
+          </AnimatePresence>
+        </div>
+        <div className="flex gap-2">
+          {slides.map((s, i) => (
+            <span
+              key={s.src}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === index ? "w-6 bg-royal" : "w-1.5 bg-[var(--muted)]/50"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -71,10 +101,9 @@ const line = {
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mesh-hero absolute inset-0 -z-10" />
-      <NetworkBackdrop />
-      <div className="container-x grid items-center gap-12 pb-20 pt-36 md:pt-44 lg:grid-cols-[1.15fr_0.85fr] lg:pb-28">
-        <div>
+      <HeroBackdrop />
+      <div className="container-x flex min-h-[88vh] flex-col justify-center pb-24 pt-36 md:min-h-[92vh] md:pt-44">
+        <div className="max-w-2xl">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,19 +147,6 @@ export function Hero() {
             </Link>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.25, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="relative"
-        >
-          <Portrait src="/images/portrait-hero.jpg" className="aspect-[4/5] w-full shadow-card" />
-          <div className="glass absolute -bottom-5 -left-5 hidden rounded-2xl border border-[var(--line)] p-4 sm:block">
-            <p className="text-xs text-[var(--muted)]">Focused on</p>
-            <p className="font-serif text-lg">Africa's Digital Economy</p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
