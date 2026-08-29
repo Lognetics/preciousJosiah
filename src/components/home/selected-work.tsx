@@ -15,7 +15,7 @@ export function SelectedWork() {
         </h2>
       </Reveal>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
         {selectedWork.map((w, i) => (
           <Reveal key={w.title} delay={i * 0.07}>
             <Link

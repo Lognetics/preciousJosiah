@@ -53,10 +53,10 @@ export default function OG() {
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -2 }}>
-            Building at the
+            Building at the intersection
           </div>
           <div style={{ fontSize: 62, fontWeight: 700, lineHeight: 1.08, letterSpacing: -2 }}>
-            intersection of Africa,
+            of Africa and
           </div>
           <div
             style={{
@@ -67,7 +67,7 @@ export default function OG() {
               color: "#5B7CFF",
             }}
           >
-            Web3 & digital finance.
+            the future of money.
           </div>
         </div>
         <div style={{ fontSize: 30, opacity: 0.85 }}>{site.name}</div>

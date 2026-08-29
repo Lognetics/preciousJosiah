@@ -5,13 +5,13 @@ export const site = {
   tagline: "Building at the intersection of Africa, Web3 and digital finance.",
   // Hero supporting paragraph (also used for meta description).
   heroSub:
-    "Precious Josiah Cheta-Udezue is a Web3 & Fintech builder working across blockchain, digital finance, stablecoins and Africa's innovation ecosystem. She builds, writes, speaks and works with communities around the technologies shaping the future of finance.",
+    "I want more people to understand and benefit from the technology reshaping how money moves, and to build it from Africa outward.",
   footerNote:
     "Web3 & Fintech builder, educator and ecosystem contributor working across Africa and beyond.",
   url: "https://preciousjosiah.com",
   email: "hello@preciousjosiah.com",
   description:
-    "Precious Josiah Cheta-Udezue is a Web3 and fintech builder working across blockchain, digital finance, stablecoins and Africa's innovation ecosystem. She builds, writes, speaks and works with communities around the technologies shaping the future of finance.",
+    "Precious Josiah Cheta-Udezue builds at the intersection of Africa and the future of money, working across digital finance, stablecoins, cross-border payments, community and education.",
   socials: {
     linkedin: "https://linkedin.com/in/preciousjosiah",
     twitter: "https://twitter.com/preciousjosiah",
@@ -45,23 +45,15 @@ export const topics = [
   "Fintech",
 ] as const;
 
-// "What I Work On" - kept deliberately short.
+// "What I Work On" - two focused areas.
 export const workAreas = [
   {
-    title: "Digital Finance",
-    body: "Stablecoins, digital assets, cross-border payments and financial inclusion.",
+    title: "Digital Finance & Payments",
+    body: "Stablecoins, digital assets, and cross-border payments that make it easier for money to move in and out of Africa.",
   },
   {
-    title: "Web3 & Emerging Technology",
-    body: "Helping people understand and navigate blockchain and emerging technologies.",
-  },
-  {
-    title: "Africa's Digital Economy",
-    body: "Exploring opportunities for African businesses, builders and talent in the digital economy.",
-  },
-  {
-    title: "Education & Community",
-    body: "Building communities, creating educational content and helping more people participate in emerging technology.",
+    title: "Community & Education",
+    body: "Building the communities and content that help people understand this technology and actually use it.",
   },
 ];
 
@@ -70,37 +62,28 @@ export const selectedWork = [
   {
     title: "Raba Pay",
     tag: "Fintech / Digital Finance",
-    body: "Fintech, digital finance and cross-border payments, exploring better ways for money to move across borders.",
+    body: "Building better ways for money to move across African borders.",
     image: "/images/gallery-yacht.jpg",
     href: "#raba-pay",
     cta: "Learn more",
   },
   {
-    title: "Web3 & Community Building",
+    title: "Community Building",
     tag: "Community / Ecosystem",
-    body: "Building and supporting Web3 communities and ecosystems, and helping more people take part in emerging technology.",
+    body: "Growing and supporting communities across Web3 and digital finance, from early adopters to builders.",
     image: "/images/gallery-city.jpg",
     href: "/projects",
-    cta: "Learn more",
-  },
-  {
-    title: "Education & Thought Leadership",
-    tag: "Writing / Speaking",
-    body: "Articles, educational work, interviews and industry conversations on Web3, digital finance and Africa's digital economy.",
-    image: "/images/portrait-seated.jpg",
-    href: "/publications",
     cta: "Learn more",
   },
 ];
 
 // "Speaking" topics.
 export const speakingTopics = [
-  "The Future of Cross-Border Payments",
+  "Cross-Border Payments in Africa",
   "Stablecoins & Digital Finance",
-  "Africa's Digital Economy",
-  "Web3 Beyond the Hype",
-  "Financial Inclusion & Emerging Technology",
-  "Building Communities Around Emerging Technology",
+  "Financial Inclusion in Practice",
+  "Mentorship & Career Growth for Women",
+  "Any topic that aligns",
 ];
 
 // "By the Numbers" - edit values/labels freely; keep only figures you can stand behind.

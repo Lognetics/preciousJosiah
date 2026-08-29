@@ -42,31 +42,16 @@ export function HomeAbout() {
               <span className="h-px w-6 bg-royal" /> About Precious
             </span>
             <p className="mt-5 font-serif text-2xl leading-snug md:text-3xl">
-              My journey through Web3 has always been about building: building communities,
-              creating opportunities, and helping people understand and participate in emerging
-              technology.
+              I build things at the intersection of money and technology in Africa, starting in
+              community and education, now focused on digital finance and Raba Pay.
             </p>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="mt-6 space-y-5 text-lg leading-relaxed text-[var(--muted)]">
-              <p>
-                My work has grown from Web3 education and community building into broader work
-                across emerging technology, digital finance and fintech.
-              </p>
-              <p>
-                Over the years, I have worked across education, community building, ecosystem
-                development, content and speaking.
-              </p>
-              <p>
-                Today, my interests sit across Web3, digital finance, stablecoins, fintech,
-                cross-border payments, financial inclusion and Africa's digital economy.
-              </p>
-              <p>
-                I am particularly interested in the space between technology and adoption:
-                whether people can understand it, trust it and actually use it.
-              </p>
-            </div>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-[var(--muted)]">
+              What interests me most is adoption: not just whether the technology works, but
+              whether people trust it and actually use it.
+            </p>
           </Reveal>
 
           <Reveal delay={0.12}>

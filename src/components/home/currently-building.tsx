@@ -15,13 +15,9 @@ export function CurrentlyBuilding() {
                 <span className="h-px w-6 bg-royal" /> Currently Building
               </span>
               <h2 className="mt-4 font-serif text-4xl font-semibold md:text-5xl">Raba Pay</h2>
-              <p className="mt-4 max-w-xl text-lg text-[var(--fg)]/90">
-                Exploring better ways for money to move across borders.
-              </p>
-              <p className="mt-4 max-w-xl leading-relaxed text-[var(--muted)]">
-                Raba Pay is where much of my current focus sits: fintech, stablecoins, digital
-                finance and cross-border payments, and the practical work of making money move
-                more easily between people and markets.
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-[var(--fg)]/90">
+                Making it easier for money to move across African borders using stablecoins and
+                better payment infrastructure.
               </p>
               <Link href={site.rabaPayUrl} className="btn-primary mt-8">
                 Explore Raba Pay <ArrowRight size={16} />

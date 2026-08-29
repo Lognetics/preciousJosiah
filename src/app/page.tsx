@@ -27,10 +27,8 @@ export default function HomePage() {
               To make innovation more accessible, across Africa and beyond.
             </h2>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)]">
-              I want more people to understand the technologies shaping the future, and have the
-              opportunity to participate in them. My work focuses on educating, connecting and
-              empowering people through emerging technologies while making innovation more
-              accessible across Africa and beyond.
+              I want more people to understand and benefit from the technology reshaping how money
+              moves, and to build it from Africa outward.
             </p>
           </Reveal>
         </div>
@@ -49,11 +47,8 @@ export default function HomePage() {
           <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-[var(--line)] p-8 md:flex-row md:items-center md:p-12">
             <div>
               <h2 className="font-serif text-2xl font-semibold md:text-3xl">
-                Available for speaking, partnerships and collaborations.
+                Available for speaking, partnerships, and collaborations in fintech and digital finance.
               </h2>
-              <p className="mt-2 text-[var(--muted)]">
-                For speaking invitations, media, ecosystem work or fintech and Web3 opportunities.
-              </p>
             </div>
             <div className="flex shrink-0 flex-wrap gap-3">
               <Link href="/contact" className="btn-primary">

@@ -9,7 +9,7 @@ export function WhatIWorkOn() {
           <span className="h-px w-6 bg-royal" /> What I Work On
         </span>
         <h2 className="mt-4 max-w-2xl text-display font-semibold">
-          Four areas, one throughline.
+          The two areas I spend most of my time on.
         </h2>
       </Reveal>
       <div className="mt-12 grid gap-4 sm:grid-cols-2">

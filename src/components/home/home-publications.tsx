@@ -16,7 +16,7 @@ export function HomePublications() {
             <span className="h-px w-6 bg-royal" /> Ideas & Perspectives
           </span>
           <h2 className="mt-4 max-w-2xl text-display font-semibold">
-            Writing about Web3, digital finance, fintech and Africa's digital economy.
+            Writing on digital finance, stablecoins, and Africa's digital economy.
           </h2>
         </Reveal>
         <Reveal>
